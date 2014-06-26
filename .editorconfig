@@ -1,0 +1,32 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+[*.coffee]
+indent_size = 2
+
+[*.less]
+indent_size = 2
+
+[*.jade]
+indent_size = 2
+
+[{*.yml, *.yaml}]
+indent_size = 2
+
+[*.handlebars]
+indent_size = 2
+
+[*.pp]
+indent_size = 2
+
+[debian/rules]
+indent_style = tab

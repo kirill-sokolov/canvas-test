@@ -1,0 +1,18 @@
+/* ******************************** RESET ********************************* */
+*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;margin:0;padding:0;}
+html, body {min-height: 100%; height:100%;}
+html>body {position: relative; height: auto;}
+table{border-collapse:collapse;border-spacing:0;}
+th, td{vertical-align:top;}
+fieldset,img{border:0;}
+li{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:100;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select,option{font-family:inherit; font-size:inherit; font-weight:inherit;}
+select, option {font-size:1em;}
+img {display: block;max-width: 100%;max-height: 100%;}
+.clearfix {display: block;height:0px;clear: both;}

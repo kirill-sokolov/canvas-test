@@ -1,0 +1,66 @@
+// #footer {  .rounded-corners(10px); }
+
+.stretch(@top: 0, @right: @top, @bottom: @top, @left: @right) {
+  position: absolute;
+  top: @top;
+  right: @right;
+  bottom: @bottom;
+  left: @left;
+}
+
+.border-radius (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+.box-shadow(@param) {
+  -webkit-box-shadow: @param;
+  box-shadow: @param;
+}
+
+.opacity(@percent) {
+  opacity: @percent;
+  filter: 'alpha(opacity=' @percent*100 ')';
+}
+
+.user-select(@param: none) {
+  -ms-user-select: @param;
+  -moz-user-select: @param;
+  -webkit-user-select: @param;
+  -khtml-user-select: @param;
+  user-select: @param;
+}
+
+.transition(@param: all 0.3s ease-in-out){
+  -webkit-transition: @param;
+  -moz-transition: @param;
+  -o-transition: @param;
+  -ms-transition: @param;
+  transition: @param;
+}
+
+.text-shadow(@param: none){
+  -moz-text-shadow: @param;
+  -webkit-text-shadow: @param;
+  text-shadow: @param;
+}
+
+#fonts {
+  @fallback-fonts: "Arial", sans-serif;
+  .light() {
+    font-family:"Open Sans", @fallback-fonts;
+    font-weight: 100;
+    font-style: normal;
+  }
+  .normal() {
+    font-family: "Open Sans", @fallback-fonts;
+    font-weight: 300;
+    font-style: normal;
+  }
+  .bold() {
+    font-family:"Open Sans", @fallback-fonts;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
