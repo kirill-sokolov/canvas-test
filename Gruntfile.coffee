@@ -43,7 +43,7 @@ module.exports = (grunt) ->
         files: [{
           expand: true
           flatten: false
-          cwd: "app_frontend/coffee"
+          cwd: "app_frontend/coffee/"
           src: ["**/*.coffee"]
           dest: "app_frontend/build/js/"
           ext: ".js"
@@ -105,6 +105,33 @@ module.exports = (grunt) ->
           ext: ".html"
         }]
 
+    watch:
+      options:
+        interval: 1000
+        dateFormat: (time) ->
+          grunt.log.writeln "The watch finished in " + time + "ms at" + (new Date()).toString()
+          grunt.log.writeln "Waiting for more changes..."
+      app_less:
+        files: ['app_frontend/less/**/*.less']
+        tasks: ['less:app']
+        options: {
+          livereload: true,
+          #event: ['added', 'deleted']
+        }
+      app_coffee:
+        files: ['app_frontend/coffee/*.coffee']
+        tasks: ['coffee']
+        options: {
+          livereload: true,
+          #event: ['added', 'deleted']
+        }
+      gruntfile:
+        options:
+          reload: true
+          atBegin: true
+        files: ['Gruntfile.coffee']
+        tasks: ['default']
+
     ###
     jade:
       compile:
@@ -135,7 +162,8 @@ module.exports = (grunt) ->
     grunt.registerTask('full', 'Build assets for full mode', [
       'jade', 'less', 'coffee',
       'shell:production_js',
-      'concat', 'uglify'
+      'concat',
+      'uglify'
     ])
 
     grunt.registerTask('default', ['dev'])

@@ -2,22 +2,28 @@
 <html lang="en">
   <head>
     <title>pageTitle</title>
+    <script type="text/javascript" src="app_frontend/build/js/production.js"></script>
+    <link rel="stylesheet" href="app_frontend/build/css/main.css">
   </head>
   <body>
-    <script type="text/javascript">
-      youAreUsingJade = true
-      console.debug(youAreUsingJade)
-      console.debug('ssss1')
-    </script>
-    <h1>Jade - node template engine</h1>
-    <div id="container" class="col"></div>
-    <canvas id="canvas" height="320" width="480">obnovite brouzer</canvas>
-    <script type="text/javascript">
-      var example = document.getElementById("canvas"),
-      ctx     = example.getContext('2d');
-      ctx.fillRect(0, 0, example.width, example.height);
-      
-      
-    </script>
+    <div id="header">
+      <h1>Header</h1>
+    </div>
+    <div id="container">
+      <h1>Content</h1>
+      <div class="canvas-container">
+        <canvas id="canvas-layer1" height="800" width="600" class="canvas-elem"></canvas>
+        <canvas id="canvas-layer2" class="canvas-elem"></canvas>
+        <canvas id="canvas-layer3" class="canvas-elem"></canvas>
+        <canvas id="canvas-layer4" class="canvas-elem"></canvas>
+        <canvas id="canvas-layer5" class="canvas-elem">obnovite brouzer</canvas>
+        <div id="canvas-controls"></div>
+        <script type="text/javascript">// the way to write JS</script>
+      </div>
+    </div>
+    <div id="footer">
+      <h1>Footer</h1>
+    </div>
+    <script src="//localhost:35729/livereload.js"></script>
   </body>
 </html>

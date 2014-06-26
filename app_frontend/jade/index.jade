@@ -1,18 +1,14 @@
 doctype html
 html(lang="en")
-    include includes/header
-    body
-        script(type='text/javascript').
-            youAreUsingJade = true
-            console.debug(youAreUsingJade)
-            console.debug('ssss1')
-        h1 Jade - node template engine
-        #container.col
-        canvas#canvas(height='320' width='480').
-            obnovite brouzer
-        script(type='text/javascript').
-            var example = document.getElementById("canvas"),
-            ctx     = example.getContext('2d');
-            ctx.fillRect(0, 0, example.width, example.height);
+  include includes/head
+  body
+    #header
+      include includes/header
+    #container
+      include content/index
+    #footer
+      include includes/footer
+    script(src="//localhost:35729/livereload.js")
+
 
 
